@@ -25,7 +25,7 @@ client.connect(()=>{
 	console.log('Database conected');
 });
 
-app.get('/keyword',(req,res)=>{
+app.get('/',(req,res)=>{
 	var search = req.query.search.trim().toLowerCase();
 	var pageNum = parseInt(req?.query?.page) || 1;
 	var limit = req.query.page?`limit 30 offset ${30*(pageNum-1)}`:"";
